@@ -2,26 +2,37 @@
 #include <fstream>
 #include <vector> // for the vector 
 #include <string> // for the string 
+#include "Morse.h"
 using namespace std;
+string getMessage();
 int main()
 {
-    vector<char> characters;
-    vector<string> morse_code;
-    // open the file
-    ifstream file;
-    file.open("code.txt");
-    // temporarily store file contents
-    char temp_char;
-    string temp_code;
-    if (file)
+    
+    // menu
+    Morse send_message;
+    int choice
+    cout << "----------MORSE CODE TRANSLATOR----------\n";
+    cout << "1. Translate message to morse code\n";
+    cout << "2. Translate morse code\n";
+    cout << "3. Decode File\n";
+    cin >> choice
+    switch (choice)
     {
-        while (file >> temp_char >> temp_code)
-        {
-            characters.push_back(temp_char);
-            morse_code.push_back(temp_code);
-        }
+    case 1:
+        send_message.get
+        break;
+
+    default:
+        break;
     }
-    // print the characters
-    file.close();
+
     return 0;
+}
+
+string getMessage()
+{
+    string message;
+    cout << "Enter secret message: ";
+    getline(cin, message);
+    return message;
 }
