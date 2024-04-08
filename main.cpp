@@ -1,35 +1,27 @@
-// Morse code translator
-// Note: The letters of a word are separated by a space of duration equal to three dits,
-// and words are separated by a space equal to seven dits
 #include <iostream>
-#include <fstream> // read from files
-#include <vector> // vector headers
+#include <fstream>
+#include <vector> // for the vector 
+#include <string> // for the string 
 using namespace std;
 int main()
 {
- 
-  string line; // created to store each string
-  char letter; // stores latin alphabets
-  vector<char> alphabets; // store all the alphabets
-  vector<string> morse_code_chars; // store all the morse code
-
-  ifstream file("code.txt");
-  while(file)
+    vector<char> characters;
+    vector<string> morse_code;
+    // open the file
+    ifstream file;
+    file.open("code.txt");
+    // temporarily store file contents
+    char temp_char;
+    string temp_code;
+    if (file)
     {
-      file >> letter >> line;
-      alphabets.push_back(letter);
-      morse_code_chars.push_back(line);
+        while (file >> temp_char >> temp_code)
+        {
+            characters.push_back(temp_char);
+            morse_code.push_back(temp_code);
+        }
     }
-  for (char val: alphabets)
-    {
-      cout << val << endl;
-    }
-  for (string val: morse_code_chars)
-    {
-      cout << val << endl;
-    }
-  file.close()
-  
-  
-  return 0;
+    // print the characters
+    file.close();
+    return 0;
 }
