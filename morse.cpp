@@ -1,16 +1,8 @@
-// Morse code translator
-// Note: The letters of a word are separated by a space of duration equal to three dits,
-#include <iostream>
-#include <string>
-using namespace std;
-class Morse
+#include "Morse.h"
+void Morse::convertToMorse(string message)
 {
-    private:
-        string message;
-    public:
-        void convertToMorse();
-};
+    getCharacters(characters, morse_code);
+    // change message to char
 
-void Morse::convertToMorse()
-{
 }
+
