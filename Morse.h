@@ -16,5 +16,6 @@ private:
 public:
     void convertToMorse(string);
     void getCharacters(vector<char> &, vector<string> &); // get the characters from the file
+    void convertToString(vector<string>);
 };
 #endif

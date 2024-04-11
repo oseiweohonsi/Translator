@@ -4,6 +4,7 @@
 #include <string> // for the string
 #include "Morse.h"
 using namespace std;
+string getMorseCode(vector<string>);
 int main()
 {
 
@@ -11,25 +12,22 @@ int main()
     int choice;
     cout << "----------MORSE CODE TRANSLATOR----------\n";
     cout << "1. Translate message to morse code\n";
-    cout << "2. Translate morse code\n";
-    cout << "3. Decode File\n";
     cin >> choice;
-    string message;
+    string message; // hold the secret message
+    vector<string> morseCode; // hold the morse code message
     switch (choice)
     {
     case 1:
-        cout << "Enter secret message: ";
+        cout << "Encode Message: ";
         cin.ignore();
         getline(cin, message);
         send_message.convertToMorse(message);
         break;
-    case 2: 
-        cout << "Decode morse code\n";
+    case 2:
+        cout << "Decode Message: ";
+        cin.ignore();
         break;
     case 3: 
-        cout << "Decoding file...\n";
-        break;
-    case 4: 
         cout << "Exiting program...\n";
     default:
         break;

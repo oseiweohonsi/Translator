@@ -50,3 +50,7 @@ void Morse:: getCharacters(vector<char> &letters, vector<string> &code)
     // print the characters
     file.close();
 }
+void Morse::convertToString(vector<string> morseCode)
+{
+    // this program is going to convert strings from
+}
